@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A simple example</title>
+    <link rel="stylesheet" href="./panellum.css"/>
+    <link rel="stylesheet" href="./styles2.css"/>
+    <!-- <script type="text/javascript" src="./js/drawLine.js"></script> -->
+    <script type="text/javascript" src="./js/panellum2.js"></script>
+    <style>
+    #panorama {
+        width: 800px;
+        height: 800px;
+        /*width: 75em;
+        height: 50em;*/
+    }
+    </style>
+</head>
+<body style="background-color:#006978 ">
+    <div>
+        <div style="float:left;">
+            <div id="panorama"></div>
+            <canvas id ="daCanvas"></canvas>
+        </div>
+        <div style="float:right;display: flex;flex-direction: column; justify-content: space-between; background-color:">
+            <button id="panModeBtn" style="background: none; border-style: solid; margin:10% 0%" disabled><h1>Pan</h1></button>
+            <button id="drawModeBtn" style="background: none; border-style: solid; margin:10% 0%" disabled><h1>Draw</h1></button>
+            <button id="clearBtn" style="border-style: solid; margin:40% 0%"><h1>Clear</h1></button>
+        </div>
+    </div>
+<script>
+pannellum.viewer('panorama', {
+    "type": "equirectangular",
+    "panorama": "https://i.imgur.com/bhG6oH7.jpg"
+});
+// "panorama": "file://pannellum.org/images/alma.jpg"
+</script>
+
+</body>
+</html>
